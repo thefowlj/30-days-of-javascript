@@ -119,7 +119,9 @@ for(let i = 0; i < 101; i++) {
 for(let i = 0; i < 101; i++) {
   let prime = true;
   for(let j = 2; j < i - 1; j++) {
-    prime = false;
+    if(i % j == 0) {
+      prime = false;
+   }
   }
   if(prime) {
     console.log(i);
